@@ -1,3 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: teal;
+  background: #025464;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 25rem;
+  height: 30rem;
+  border-radius: 1rem;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px #00000051;
+  padding: 1.5rem;
+}
+.search {
+  background: none;
+  width: 100%;
+  align-self: flex-start;
+  box-shadow: 0 1px 2px #000000;
+  border-radius: .5rem;
+}
+.search input {
+  padding: .5rem;
+  width: 100%;
+  border-radius: .5rem;
+  border: 1px solid transparent;
+  outline: none;
 }
