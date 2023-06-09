@@ -15,11 +15,13 @@ body {
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
   padding: 1rem;
+  overflow: scroll;
 }
 
 .container {
   width: 20rem;
   height: 30rem;
+  min-height: 30rem; 
   border-radius: 1rem;
   background: white;
   box-shadow: 0 0 30px #00000051;
