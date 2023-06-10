@@ -42,11 +42,12 @@ header {
   /* box-shadow: 0 1px 2px #000000; */
   background: #bebcbca9;
   border: 2px solid transparent;
-  transition: border .2s ease;
+  transition: all .2s ease;
 } 
 
 header:focus-within {
   border-color: black;
+  background: #bebcbc;
 }
 
 .header_search {
