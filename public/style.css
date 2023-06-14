@@ -15,6 +15,7 @@ body {
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
   padding: 1rem;
+  position: relative;
 }
 
 .container {
@@ -31,6 +32,28 @@ body {
   /* justify-content: center; */
   align-items: center; 
   overflow-y: hidden;
+  position: relative;
+}
+
+.add-note-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  padding: 1rem;
+  /* background: #ffc0cb83; */
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  overflow: hidden;
+}
+
+.add-note-form_title {
+  
 }
 
 header {
@@ -116,16 +139,17 @@ header:focus-within {
    background: #bebcbca9;
 }
 
-footer {
-  width: 100%;
-  height: 5rem;
-  background: #bebcbca9;
-  align-self: flex-end;
-  z-index: 3;
-  position: relative;
+.note {
+  width: 45%;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: .3rem;
+  min-height: 30%;
+  max-height: 50%;
+  overflow: hidden;
 }
 
-.add-note {
+.add-note-btn {
   height: 3rem;
   width: 3rem;
   border-radius: 100%;
@@ -144,15 +168,15 @@ footer {
   cursor: pointer;
 }
 
-.add-note .add_icon {
+.add-note-btn .add_icon {
   width: 2rem;
 }
 
-.note {
-  width: 45%;
-  border: 1px solid black;
-  border-radius: 6px;
-  padding: .3rem;
-  min-height: 50%;
-  max-height: 70%;
+footer {
+  width: 100%;
+  height: 5rem;
+  background: #bebcbca9;
+  align-self: flex-end;
+  z-index: 3;
+  position: relative;
 }

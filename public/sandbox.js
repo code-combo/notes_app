@@ -1,2 +1,6 @@
 "use strict";
-console.log("Nothing to see here!");
+const addNote = document.querySelector(".add-note-btn");
+// console.log(addNote);
+addNote.addEventListener("click", (e) => {
+    console.log("Clicked!");
+});
