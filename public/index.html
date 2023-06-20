@@ -23,8 +23,11 @@
     <!-- Form to add note -->
     <div class="add-note-form-background">
       <form class="add-note-form">
-        <input type="text" class="add-note-form_title" placeholder="Title">
-        <textarea name="" class="add-note-form_message" cols="30" rows="10"></textarea>
+        <!-- <input type="text" class="add-note-form_title" placeholder="Title"> -->
+        <div class="add-note-form_title" contenteditable data-placeholder="Title"></div>
+        <div class="add-note-form_message" contenteditable data-placeholder="Note"></div>
+        <!-- <section>My name is...</section>  -->
+        <!-- <textarea class="text-area"></textarea> -->
       </form>
     </div>
     <!-- Header -->
@@ -37,14 +40,15 @@
    </header>
     <!-- Note container -->
     <main class="note-container">
-      <section class="note">
-        <!-- <h1 class="note-title">Go hard mentality -Dan Pena</h1>
-        <p class="note-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam</p> -->
+      <section class="note" tabindex="0">
+        <h1 class="note-title">Go hard mentality -Dan Pena</h1>
+        <!-- <p class="note-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam</p> -->
       </section>
       <section class="note">
-        <!-- <h1 class="note-title">Don't wait for motivation -Dan Pena</h1>
-        <p class="note-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec est a tortor porta sollicitudin quis sit amet sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur eget lectus in ligula imperdiet auctor</p> -->
+        <h1 class="note-title">Don't wait for motivation -Dan Pena</h1>
+        <!-- <p class="note-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec est a tortor porta sollicitudin quis sit amet sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur eget lectus in ligula imperdiet auctor</p> -->
       </section>
+      <!-- <div contentEditable=true data-text="Enter text here"></div> -->
     </main> 
 
     <!-- Footer content -->

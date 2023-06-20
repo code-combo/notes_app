@@ -1,6 +1,17 @@
 const addNote = document.querySelector(".add-note-btn") as HTMLDivElement;
-// console.log(addNote);
+const titleBox = document.querySelector(".add-note-form_title") as HTMLDivElement;
+const messageBox = document.querySelector(".add-note-form_message") as HTMLDivElement;
 
-addNote.addEventListener("click", (e: Event) => {
-    console.log("Clicked!");
-});
+document.addEventListener("paste", (e: Event) => {
+
+    const target = e.target as HTMLElement; 
+
+    if(target !== null && target.contentEditable === 'true') {
+        const clipEvent = e as ClipboardEvent
+        clipEvent.preventDefault();
+
+        const clipboardData= clipEvent.clipboardData;
+        const text = clipboardData?.getData("text/plain");
+        document.execCommand("insertHtml", false, text);
+    }
+})

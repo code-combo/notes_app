@@ -36,7 +36,6 @@ body {
 }
 
 .add-note-form-background {
-
   background: #00000023;
   position: absolute;
   top: 0;
@@ -56,15 +55,34 @@ body {
   width: 90%;
   background: whitesmoke;
   border-radius: .5rem;
-  padding: 1rem;
+  padding: .5rem;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  gap: 1rem;
+  gap: .1rem;
+  overflow-y: scroll;
 }
 
-.add-note-form_title {
+.add-note-form::-webkit-scrollbar {
+  width: .3rem;
+}
+
+.add-note-form::-webkit-scrollbar-track {
+  border-radius:  .5rem;
+  background: transparent;
+}
+
+.add-note-form::-webkit-scrollbar-thumb {
+  background: #bebcbc;
+  border-radius: .3rem;
+}
+
+.add-note-form::-webkit-scrollbar {
+  width: .3rem;
+}
+
+/* .add-note-form_title {
   background: #bebcbc;
   border: none;
   outline: none;
@@ -72,21 +90,70 @@ body {
   width: 100%;
   padding: .5rem;
   font-size: 2rem;
+  font-weight: 550;
+  color: black;
+  border-radius: .25rem;
+} */
+
+.add-note-form_title {
+  background: #bebcbc;
+  border: none;
+  outline: none;
+  /* height: 3rem; */
+  width: 100%;
+  padding: .2rem;
+  font-size: 2rem;
   font-weight: 500;
-  color: whitesmoke;
+  color: black;
+  border-radius: .25rem;
+}
+
+.add-note-form_title:empty::before {
+  content: attr(data-placeholder);
+  opacity: .5;
 }
 
 .add-note-form_message {
   width: 100%;
-  height: 17px;
-  border: none;
+  /* height: 17px;   */
   outline: none;
   background: #bebcbc;
-  font-size: 1.3rem;
-  padding: .5rem;
-  min-height: 10rem;
+  font-size: 1rem;
+  padding: .2rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+
+.add-note-form_message:empty::before {
+  content: attr(data-placeholder);
+  opacity: .6;
+}
+
+.add-note-form_title, 
+.add-note-form_message {
+  -webkit-user-modify: read-write-plaintext-only;
+}
+
+.text-area {
+  background: #bebcbc;
+  border-radius: .35rem;
+  width: 100%;
+  height: 59px;
+  /* height: 3rem; */
+  padding: .2rem;
+  outline: none;
+  border: none;
   resize: none;
-  /* overflow: auto; */
+  /* overflow: hidden;/ */
+}
+
+.text-area:is(:focus, :valid) {
+  padding: 14px;
+  border: 2px solid #4671EA;
+}
+
+.text-area::-webkit-scrollbar {
+  width: 0px;
 }
 
 header {
@@ -156,7 +223,6 @@ header:focus-within {
   flex-flow: row wrap;
   gap: .5rem;
   justify-content: center;
-  align-items: center;
 }
 
 .note-container::-webkit-scrollbar {
@@ -182,6 +248,14 @@ header:focus-within {
   max-height: 50%;
   overflow: hidden;
 }
+
+/* [contentEditable=true]:empty:not(:focus):before {
+  content: attr(data-placeholder);
+} */
+
+/* [contentEditable=true]:empty:not(:focus):before {
+  content: attr(data-text)
+} */
 
 .add-note-btn {
   height: 3rem;
