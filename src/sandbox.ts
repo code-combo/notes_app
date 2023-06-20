@@ -10,7 +10,7 @@ document.addEventListener("paste", (e: Event) => {
         const clipEvent = e as ClipboardEvent
         clipEvent.preventDefault();
 
-        const clipboardData= clipEvent.clipboardData;
+        const clipboardData = clipEvent.clipboardData;
         const text = clipboardData?.getData("text/plain");
         document.execCommand("insertHtml", false, text);
     }

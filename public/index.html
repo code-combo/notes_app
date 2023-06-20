@@ -20,14 +20,20 @@
 
 <body>
   <div class="container">
-    <!-- Form to add note -->
+    <!-- Form to add note --> 
     <div class="add-note-form-background">
       <form class="add-note-form">
-        <!-- <input type="text" class="add-note-form_title" placeholder="Title"> -->
-        <div class="add-note-form_title" contenteditable data-placeholder="Title"></div>
-        <div class="add-note-form_message" contenteditable data-placeholder="Note"></div>
-        <!-- <section>My name is...</section>  -->
-        <!-- <textarea class="text-area"></textarea> -->
+        <div class="add-note-form_icons header-icons">
+          <div class="back-btn">
+            <img src="../icons/less-than.png" alt="back/done button">
+          </div>
+          <div class="pin-btn">
+            <img src="../icons/icons8-pin-32.png" alt="back/done button">
+          </div>
+        </div>
+        <div class="add-note-form_title" contenteditable data-placeholder="Title" spellcheck="false"></div>
+        <div class="add-note-form_message" contenteditable data-placeholder="Note" spellcheck="false" autofocus></div>
+        <div class="add-note-form_icons footer-icons"></div>
       </form>
     </div>
     <!-- Header -->
