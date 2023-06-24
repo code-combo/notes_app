@@ -51,7 +51,7 @@ body {
 }
 
 .add-note-form_icons {
-  height: 2rem;
+  min-height: 2rem;
   width: 100%;
   /* background: #bebcbc; */
   background: whitesmoke;
@@ -67,35 +67,73 @@ body {
 .header-icons {
   width: 100%;
   min-height: 3.5rem;
+  z-index: 3;
   /* background: red; */
 }
 
-.back-btn,
-.pin-btn,
-.plus-btn,
-.undo-btn,
-.redo-btn,
-.more-btn
-{
+.act-btn {
   width: 1.5rem;
+  height: 1.5rem;
+  padding: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
+  position: relative;
+  /* background: red; */
+  text-align: center;
+  border-radius: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  vertical-align: middle;
 }
 
-.back-btn img,
-.pin-btn img,
-.plus-btn img,
-.undo-btn img,
-.redo-btn img,
-.more-btn img {
+.act-btn::after {
+  content: "";
+  height: 100%;
   width: 100%;
-  /* background: whitesmoke; */
+  border-radius: 100%;
+  background: #bebcbc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  transform: scale(.3);
+  z-index: -1;
+  transition: all .4s ease-in;
+}
+
+.act-btn::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  background: #747272;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  transform: scale(0);
+  transition: all .3s ease-out;
+  z-index: -2;
+}
+
+.act-btn:hover::after, 
+.act-btn:hover::before {
+  transform: scale(1);
+  visibility: visible;
+}
+
+.act-btn:hover::after .act-btn:hover {
+  z-index: 2;
 }
 
 .footer-icons {
   bottom: 0;
-  display: flex;
-  align-items: center;
-  min-height: 2rem;
+  background: pink;
+  margin-top: auto;
+  border-radius: .3rem;
 }
 
 .footer-icon-2 {
@@ -170,13 +208,16 @@ body {
 
 .add-note-form_message {
   width: 100%;
-  /* height: 80%;   */
+  /* min-height: 80%;   */
   outline: none;
   /* background: #bebcbc; */
   font-size: 1rem;
   padding: .2rem;
   border: 1px solid transparent;
   border-radius: .25rem;
+  /* height: 1rem; */
+  resize: none;
+  overflow: -moz-hidden-unscrollable;
 }
 
 .add-note-form_message:empty::before {
@@ -202,14 +243,14 @@ body {
   /* overflow: hidden;/ */
 }
 
-.text-area:is(:focus, :valid) {
+/* .text-area:is(:focus, :valid) {
   padding: 14px;
   border: 2px solid #4671EA;
 }
 
 .text-area::-webkit-scrollbar {
   width: 0px;
-}
+} */
 
 header {
   width: 93%;
